@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # wedding-site
 
 This README outlines the details of collaborating on this Ember application.
@@ -54,3 +55,6 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
+=======
+# wedding-site
+>>>>>>> d865fdc4ed7c8d60483b5bab77409c85dabe2596
