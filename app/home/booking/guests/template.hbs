@@ -1,0 +1,16 @@
+<h3>Confirm Guests</h3>
+<table class='table'>
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">RSVP</th>
+  </tr>
+  {{#each model.guests as |guest|}}
+    <tr scope='row'>
+      <td>{{guest.name}}</td>
+      <td>
+        {{rsvp-comp guest=guest}}
+      </td>
+    </tr>
+  {{/each}}
+</table>
+{{#link-to 'home.booking.pick-meal' model class='btn btn-primary'}}Next >{{/link-to}}

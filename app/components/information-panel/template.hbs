@@ -1,0 +1,68 @@
+<!-- Projects Section -->
+<section id="projects" class="projects-section bg-light">
+  <div class="container">
+    <!-- Featured Project Row -->
+    <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+      <div class="col-xl-8 col-lg-7">
+        <div class='mb-3 mb-lg-0'>
+          {{#g-map lat='51.508530' lng='-0.076132' zoom=10 as |g|}}
+            {{#each locations as |l|}}
+              {{g.marker lat=l.lat lng=l.lng}}
+            {{/each}}
+          {{/g-map}}
+        </div>
+      </div>
+      <div class="col-xl-4 col-lg-5">
+        <div class="featured-text text-center text-lg-left">
+          <h4>Location</h4>
+          <p class="text-black-50 mb-0">
+            Add a really detailed bit of information about the venue.(Make sure we add the correct lats and longs).
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Project One Row -->
+    <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
+      <div class="col-lg-6">
+        <img class="img-fluid" src="img/demo-image-01.jpg" alt="Insert google maps here">
+      </div>
+      <div class="col-lg-6">
+        <div class="bg-green text-center h-100 project">
+          <div class="d-flex h-100">
+            <div class="project-text w-100 my-auto text-center text-lg-left">
+              <h4 class="text-white">Hotels</h4>
+              <p class="mb-0 text-white-50">
+                If your travelling from far away or would you'd like to stay please see some nearby hotels:
+              </p>
+              <p>
+                Penta Hotel, Ranelagh Road, Ipswich, IP2 0AD
+              Tel : 01473 694 604 Website: www.pentahotels.com </p>
+              <p>
+                Chantry park - Premier inn, Old Hadleigh Road, Ipswich, IP8 3AR
+              Tel: 0333 003 8101 Website: www.premierinn.com.</p>
+              <hr class="d-none d-lg-block mb-0 ml-0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Project Two Row -->
+    <div class="row justify-content-center no-gutters">
+      <div class="col-lg-6">
+        <img class="img-fluid" src="img/demo-image-02.jpg" alt="">
+      </div>
+      <div class="col-lg-6 order-lg-first">
+        <div class="bg-green text-center h-100 project">
+          <div class="d-flex h-100">
+            <div class="project-text w-100 my-auto text-center text-lg-right">
+              <h4 class="text-white">Mountains</h4>
+              <p class="mb-0 text-white-50">Another example of a project with its respective description. These sections work well responsively as well, try this theme on a small screen!</p>
+              <hr class="d-none d-lg-block mb-0 mr-0">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

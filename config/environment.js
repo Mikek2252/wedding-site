@@ -16,7 +16,17 @@ module.exports = function(environment) {
         Date: false
       }
     },
-
+    'ember-google-maps': {
+      key: 'AIzaSyDGJo7zzuw9UFZbmc5gAOE4PaLZI7_urVM', // Using .env files in this example
+      language: 'en',
+      region: 'GB',
+      protocol: 'https',
+      version: '3.31',
+      libraries: ['geometry', 'places']
+      // client: undefined,
+      // channel: undefined,
+      // baseUrl: '//maps.googleapis.com/maps/api/js'
+    },
     APP: {
       // Here you can pass flags/options to your application instance
       // when it is created

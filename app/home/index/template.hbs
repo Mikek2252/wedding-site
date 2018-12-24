@@ -1,0 +1,11 @@
+<img src="img/logo.svg" alt="Logo">
+<p class="text-white-50 mx-auto mt-2 mb-1">RSVP by entering your booking reference on your invitaion:</p>
+<form class="form-horizontal">
+  <div class="form-group">
+    <label for="name" class="control-label">Booking Reference:</label>
+      {{input value=model.bookingRef class="form-control"}}
+  </div>
+  <div class="form-group">
+   <button {{action "findBooking"}} class="btn btn-sm btn-primary">Check-in</button>
+ </div>
+</form>

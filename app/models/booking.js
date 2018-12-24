@@ -1,6 +1,10 @@
 import DS from 'ember-data';
+import {filterBy, empty} from '@ember/object/computed';
 
 export default DS.Model.extend({
-    postcode: DS.attr('string'),
-    isComing: DS.attr('boolean')
+    guests: DS.hasMany('guest'),
+    isEveningOnly: DS.attr('boolean'),
+    guestsThatAreComing: filterBy('guests', 'isComing', true),
+    guestsThatHaveNotResponded: filterBy('guests', 'isComing', null),
+    haveResponded: empty('guestsThatHaveNotResponded')
 });

@@ -7,11 +7,19 @@ const Router = EmberRouter.extend({
 });
 
 Router.map(function() {
-  this.route('booking',{path: ':id'}, function () {
+  this.route('booking', {path: '/:id'}, function () {
     this.route('guests');
     this.route('information');
     this.route('pick-meal');
   })
+  this.route('home', {path:'/'}, function () {
+    this.route('booking', {path: '/:id'}, function () {
+      this.route('guests');
+      this.route('information');
+      this.route('pick-meal');
+      this.route('confirmation');
+    })
+  });
 });
 
 export default Router;

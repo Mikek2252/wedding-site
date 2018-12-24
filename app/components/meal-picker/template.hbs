@@ -1,0 +1,11 @@
+{{#each meals as |meal|}}
+  <label for={{concat meal.name guest.id}}>{{meal.name}}</label>
+  {{radio-button
+    id=(concat meal.name guest.id)
+    name=(concat 'guest' guest.id)
+    value=meal
+    groupValue=guest.meal
+  }}
+{{/each}}
+<!-- {{concat meal.name guest.id}}
+{{concat meal.name guest.id}} -->

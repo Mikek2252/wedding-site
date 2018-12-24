@@ -1,0 +1,4 @@
+{{#each guests as |guest|}}
+  <p>{{guest.name}}</p>
+  {{meal-picker meals=meals guest=guest}}
+{{/each}}
