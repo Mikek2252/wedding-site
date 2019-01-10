@@ -25,7 +25,7 @@ export default Route.extend({
     }).then(() => {
       this.transitionTo('home.booking.confirmation', booking);
     }).catch((err) => {
-      console.log(err);
+      //TODO:
     });
   },
   actions: {

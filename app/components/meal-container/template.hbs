@@ -1,4 +1,14 @@
-{{#each guests as |guest|}}
-  <p>{{guest.name}}</p>
-  {{meal-picker meals=meals guest=guest}}
-{{/each}}
+<table class='table'>
+  <tr>
+    <th scope="col">Name</th>
+    <th scope="col">Meal Choice</th>
+  </tr>
+  {{#each guests as |guest|}}
+    <tr scope='row'>
+      <td>{{guest.name}}</td>
+      <td>
+        {{meal-picker meals=meals guest=guest}}
+      </td>
+    </tr>
+  {{/each}}
+</table>

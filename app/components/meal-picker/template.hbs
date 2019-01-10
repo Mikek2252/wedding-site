@@ -3,9 +3,8 @@
   {{radio-button
     id=(concat meal.name guest.id)
     name=(concat 'guest' guest.id)
-    value=meal
-    groupValue=guest.meal
+    value=meal.id
+    changed='updateMeal'
   }}
+  <br>
 {{/each}}
-<!-- {{concat meal.name guest.id}}
-{{concat meal.name guest.id}} -->
