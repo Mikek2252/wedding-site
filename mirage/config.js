@@ -24,10 +24,7 @@ export default function() {
     http://www.ember-cli-mirage.com/docs/v0.3.x/shorthands/
   */
   this.get('/bookings');
-  this.get('/bookings/:id', function({bookings}, request) {
-     const serialize = this.serialize(bookings.findBy(request.params));
-     return serialize
-  });
+  this.get('/bookings/:id');
   this.patch('/bookings/:id');
 
   this.get('/meals');

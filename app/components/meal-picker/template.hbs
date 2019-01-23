@@ -1,10 +1,18 @@
 {{#each meals as |meal|}}
-  <label for={{concat meal.name guest.id}}>{{meal.name}}</label>
-  {{radio-button
+  {{#radio-button
     id=(concat meal.name guest.id)
     name=(concat 'guest' guest.id)
     value=meal.id
     changed='updateMeal'
   }}
+    <span>{{meal.name}}</span>
+  {{/radio-button}}
   <br>
 {{/each}}
+{{#if showMealError}}
+  <div class="error">
+    {{#if (v-get guest 'meal.id' 'message')}}
+      You must select an option
+    {{/if}}
+  </div>
+{{/if}}

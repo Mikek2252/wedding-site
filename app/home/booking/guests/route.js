@@ -4,5 +4,5 @@ export default Route.extend({
   afterModel(model) {
     model.get('guests');
     return model;
-  },
+  }
 });

@@ -12,11 +12,11 @@
         <tr scope='row'>
           <td>{{guest.name}}</td>
           <td>
-            {{rsvp-comp guest=guest}}
+            {{rsvp-comp guest=guest showRSVPError=showRSVPError}}
           </td>
         </tr>
       {{/each}}
     </table>
-    {{#link-to 'home.booking.pick-meal' model class='btn btn-primary'}}Next >{{/link-to}}
+    <button {{action "submit"}} class="btn btn-sm btn-primary">Next ></button>
   </div>
 {{/if}}

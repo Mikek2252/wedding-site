@@ -1,10 +1,18 @@
 <div class="bg-white opacity-75 p1">
   <h2>You're all booked!</h2>
   <h3>We Look forward to seeing you at our wedding!</h3>
-  <p>What a confirmation email? Put your email below and click submit</p>
+  <p>Want a confirmation email? Put your email below and click submit</p>
   <label for='email'>Email:</label>
-  <input name='email' type='email'>
+  {{input name='email' type='email'
+    value=model.email
+    focus-out=(action (mut showEmailError) true)
+  }}
   <button class='btn btn-primary' {{action 'confirmationEmail' model}}>Submit ></button>
+  {{#if showEmailError}}
+    <div class="error">
+      {{v-get model 'email' 'message'}}
+    </div>
+  {{/if}}
   <p>For more information for the big day please check below or check the navigation on the top right</p>
   <a class='btn btn-primary' href='#venue'>Venue</a>
   <a class='btn btn-primary' href='#hotels'>Hotels</a>

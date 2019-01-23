@@ -1,5 +1,4 @@
 import Route from '@ember/routing/route';
-import RSVP from 'rsvp';
 
 export default Route.extend({
   model() {
@@ -14,23 +13,5 @@ export default Route.extend({
         this.submit();
       }
     });
-  },
-  submit(booking) {
-    const guests = booking.get('guests');
-    const guestPromises = guests.map((guest) => {
-      return guest.save();
-    });
-    RSVP.all(guestPromises).then(() => {
-      return booking.save();
-    }).then(() => {
-      this.transitionTo('home.booking.confirmation', booking);
-    }).catch((err) => {
-      //TODO:
-    });
-  },
-  actions: {
-    submit(booking) {
-      this.submit(booking);
-    }
   }
 });

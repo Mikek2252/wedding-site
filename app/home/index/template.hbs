@@ -1,10 +1,23 @@
-<img src="img/logo.svg" alt="Logo">
+<img src="/img/logo.svg" alt="Logo">
 <p class="text-white-50 mx-auto mt-2 mb-1">RSVP by entering your booking reference on your invitaion:</p>
 <form class="form-horizontal">
   <div class="form-group">
     <label for="name" class="control-label">Booking Reference:</label>
-      {{input value=model.bookingRef class="form-control"}}
+    {{input
+      value=model.id
+      class="form-control"
+      focus-out=(action (mut showBookingRefError) true)}}
+    {{#if showBookingRefError}}
+      <div class="error">
+        {{v-get model 'id' 'message'}}
+      </div>
+    {{/if}}
   </div>
+  {{#if bookingNotFoundError}}
+    <div class="error">
+      Sorry we couldn't find your booking could you check your booking code is correct.
+    </div>
+  {{/if}}
   <div class="form-group">
    <button {{action "findBooking"}} class="btn btn-sm btn-primary">Check-in</button>
  </div>

@@ -1,12 +1,21 @@
-<label for='yes'>Yes</label>
-{{radio-button
+{{#radio-button
   name=name
   value=true
   groupValue=guest.isComing
 }}
-<label for='no'>No</label>
-{{radio-button
+<span>Yes</span>
+{{/radio-button}}
+{{#radio-button
   name=name
   value=false
   groupValue=guest.isComing
 }}
+  <span>No</span>
+{{/radio-button}}
+{{#if showRSVPError}}
+  <div class="error">
+    {{#if (v-get guest 'isComing' 'isInvalid')}}
+      You must select an option
+    {{/if}}
+  </div>
+{{/if}}

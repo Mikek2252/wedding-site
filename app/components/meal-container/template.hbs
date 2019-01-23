@@ -7,7 +7,13 @@
     <tr scope='row'>
       <td>{{guest.name}}</td>
       <td>
-        {{meal-picker meals=meals guest=guest}}
+        {{meal-picker showMealError=showMealError meals=meals guest=guest}}
+      </td>
+    </tr>
+    <tr>
+      <td colspan="2">
+        Dietary Requirements
+        {{textarea value=guest.dietaryRequirements class="full-width" row=4}}
       </td>
     </tr>
   {{/each}}

@@ -1,15 +1,10 @@
 <!-- Projects Section -->
-<section id="projects" class="projects-section bg-light">
+<section id="projects" class="projects-section bg-green">
   <div class="container">
     <!-- Featured Project Row -->
-    <div class="row align-items-center no-gutters mb-4 mb-lg-5">
+    <!-- <div class="row align-items-center no-gutters mb-4 mb-lg-5">
       <div class="col-xl-8 col-lg-7">
         <div class='mb-3 mb-lg-0'>
-          {{#g-map lat='51.508530' lng='-0.076132' zoom=10 as |g|}}
-            {{#each locations as |l|}}
-              {{g.marker lat=l.lat lng=l.lng}}
-            {{/each}}
-          {{/g-map}}
         </div>
       </div>
       <div class="col-xl-4 col-lg-5">
@@ -20,60 +15,98 @@
           </p>
         </div>
       </div>
-    </div>
+    </div> -->
+
     <!-- Project One Row -->
-    <div class="row justify-content-center no-gutters mb-5 mb-lg-0">
-      <div class="col-lg-6">
-        <img class="img-fluid" src="img/demo-image-01.jpg" alt="Insert google maps here">
+    <div class="row justify-content-center mb-5">
+      <div class="col-lg-6 mb-5">
+        <div class="bg-white text-center h-100 project">
+          <div class="d-flex h-100">
+            <div class="project-text w-100 text-center text-lg-left">
+              <h4 class="project-heading">Map of Location</h4>
+              <p class="uppercase text-center">
+                Sat nav: Priory Hall, Benton Street, Hadleigh, Suffolk IP7 5AZ
+              </p>
+              <img src="/img/map-01.svg" alt="Map" class="full-width">
+            </div>
+          </div>
+        </div>
       </div>
       <div class="col-lg-6">
-        <div class="bg-green text-center h-100 project">
+        <div class="bg-white text-center h-100 project">
           <div class="d-flex h-100">
-            <div class="project-text w-100 my-auto text-center text-lg-left">
-              <h4 class="text-white">Hotels</h4>
-              <p class="mb-0 text-white-50">
-                If your travelling from far away or would you'd like to stay please see some nearby hotels:
+            <div class="project-text w-100 text-center text-lg-left">
+              <h4 class="project-heading">Accomodation</h4>
+              <p>
+                If you're travelling from far away or you would like to stay please see some nearby hotels:
               </p>
-              <p>
-                Penta Hotel, Ranelagh Road, Ipswich, IP2 0AD
-              Tel : 01473 694 604 Website: www.pentahotels.com </p>
-              <p>
-                Chantry park - Premier inn, Old Hadleigh Road, Ipswich, IP8 3AR
-              Tel: 0333 003 8101 Website: www.premierinn.com.</p>
-              <hr class="d-none d-lg-block mb-0 ml-0">
+              <p class="uppercase text-center">
+                Penta Hotel, Ranelagh Road,<br>
+                Ipswich, IP2 0AD<br>
+                Tel : 01473 694 604<br>
+                Website: www.pentahotels.com
+              </p>
+              <p class="uppercase text-center">
+                Chantry park - Premier inn, Old Hadleigh Road,<br>
+                Ipswich, IP8 3AR<br>
+                Tel: 0333 003 8101<br>
+                Website: www.premierinn.com
+              </p>
+              <p class="center">
+                There is ample parking available on site and cars can be left overnight. However they must be collected by 11am the following day. If you'd like to join in on the party please see below contact numbers for local taxi companies:
+              </p>
+              <p class="mb-0">Hawk Express: <a href="tel:01473222222">01473 222222</a></p>
+              <p class="mb-0">Hadleigh private car hire: <a href="tel:01473829700">01473 829700</a></p>
+              <p class="mb-0">Ecocars: <a href="tel:01473828384">01473 828384</a></p>
+              <p class="mb-0">HA & L Private Hire: <a href="tel:01473356277">01473 356277</a></p>
             </div>
           </div>
         </div>
       </div>
     </div>
 
-    <!-- Project Two Row -->
-    <div class="row justify-content-center no-gutters">
-      <div class="col-lg-6">
-        <img class="img-fluid" src="img/demo-image-02.jpg" alt="">
-      </div>
-      <div class="col-lg-6 order-lg-first">
-        <div class="bg-green text-center h-100 project">
+    <div class="row justify-content-center">
+      <div class="col-lg-6 mb-5">
+        <div class="bg-white text-center h-100 project">
           <div class="d-flex h-100">
-            <div class="project-text w-100 my-auto text-center text-lg-left">
-              <h4 class="text-white">Travel</h4>
-              <p>
-                There is ample parking available on site and cars can be left overnight. However they must be collected by 11am the following day.
+            <div class="project-text w-100 text-center text-lg-left">
+              <h4 class="project-heading">Gifts</h4>
+              <p class="text-center">
+                We know it's not traditional,<br>
+                it's not the it's done,<br>
+                but instead of pots and pans<br>
+                we'd like a little fun!<br>
+                So if you'd like to give a gift<br>
+                to help us celebrate,<br>
+                some help towards our honeymoon,<br>
+                we would appreciate!<br>
+                The choice is really up to you<br>
+                and we would like to say,<br>
+                that the best gift we could recieve<br>
+                is you here on our special day!
               </p>
-              <p>
-                If you'd like to join in on the party please see below contact numbers for local taxi companies:
+              <img src="/img/plane-heart.svg" class="half-width center" alt="Heart">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-6 mb-5">
+        <div class="bg-white text-center h-100 project">
+          <div class="d-flex h-100">
+            <div class="project-text w-100 text-center text-lg-left">
+              <h4 class="project-heading">Order of the Day</h4>
+              <p class="text-center">
+                Guest arrive 1:30pm<br>
+                Ceremony: 2:00pm<br>
+                Followed by day reception of<br>
+                afternoon tea, lawn games & fish & chip dinner<br>
               </p>
-              <ul>
-                <li>Hawk Express <a href="tel:01473222222">01473 222222</a></li>
-                <li>Hadleigh private car hire <a href="tel:01473829700">01473 829700</a></li>
-                <li>Ecocars <a href="tel:01473828384">01473 828384</a></li>
-                <li>HA & L Private Hire <a href="tel:0147335627">01473 356277</a></li>
-              </ul>
-              <p>
-                Getting here:
-                Sat nav: Priory Hall, Benton Street, Hadleigh, Suffolk IP7 5AZ
+              <p class="text-center">
+                Evening guests arrive & the party begins at 7:30pm:<br>
+                Food, drinks and dancing.<br>
+                Please note there will be a cash bar accepting cash & cards.<br>
+                Carriages at 11:30pm
               </p>
-              <hr class="d-none d-lg-block mb-0 mr-0">
             </div>
           </div>
         </div>
