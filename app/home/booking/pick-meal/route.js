@@ -6,7 +6,7 @@ export default Route.extend({
   },
   redirect(model) {
     return model.get('guests').then(() => {
-      if (!model.get('haveResponded')) {
+      if (!model.get('hasResponded')) {
         this.transitionTo('home.booking.guests');
       }
       if (model.get('isEveningOnly')) {

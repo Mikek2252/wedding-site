@@ -4,7 +4,13 @@ export default Route.extend({
   model(params) {
     return this.store.findRecord('booking', params.id);
   },
-  redirect() {
-    this.transitionTo('home.booking.guests');
+  afterModel(model) {
+    this.controllerFor('home').validateBooking();
+    return model;
+  },
+  redirect(model) {
+    if (!model) {
+      this.transitionTo('home');
+    }
   },
 });

@@ -1,11 +1,14 @@
+{{nav-bar}}
 <header class="masthead">
-  <div class="container d-flex h-100 align-items-center">
-    <div class="mx-auto text-center">
+  <div class="container d-flex h-100 align-items-center justify-content-center">
+    <div id="rsvp" class="mx-auto text-center col-lg-6">
       {{outlet}}
     </div>
   </div>
 </header>
 
-{{information-panel}}
-{{contact-panel}}
-{{footer-panel}}
+{{#if hasValidBooking }}
+  {{information-panel}}
+  {{contact-panel}}
+  {{footer-panel}}
+{{/if}}

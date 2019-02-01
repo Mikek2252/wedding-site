@@ -1,5 +1,6 @@
 import Controller from '@ember/controller';
 import RSVP from 'rsvp';
+
 export default Controller.extend({
   actions: {
     submit() {
@@ -13,7 +14,25 @@ export default Controller.extend({
       });
 
       RSVP.all(validatedGuests).then(() => {
-        this.transitionToRoute('home.booking.pick-meal', model);
+        if (model.get('noGuestsAreComing')) {
+          const guestPromises = guests.map((guest) => guest.save());
+          RSVP.all(guestPromises).then(() => model.save()).then(() => {
+            this.transitionToRoute('home.booking.not-coming', model);
+          }).catch(() => {
+            this.set('showModelSaveError', true);
+          });
+        } else {
+          if (model.get('isEveningOnly')) {
+            const guestPromises = guests.map((guest) => guest.save());
+            RSVP.all(guestPromises).then(() => model.save()).then(() => {
+              this.transitionToRoute('home.booking.confirmation', model);
+            }).catch(() => {
+              this.set('showModelSaveError', true);
+            });
+          } else {
+            this.transitionToRoute('home.booking.pick-meal', model);
+          }
+        }
       });
     }
   }

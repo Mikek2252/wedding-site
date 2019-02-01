@@ -11,6 +11,7 @@ export default function(server) {
   const guests = server.createList('guest', 4);
   const guestIds = guests.map(guest => guest.id);
   server.create('booking', {
+    bookingRef: 'Z11',
     guestIds
   })
 }

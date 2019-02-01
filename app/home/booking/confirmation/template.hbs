@@ -1,8 +1,8 @@
-<div class="bg-white opacity-75 p1">
-  <h2>You're all booked!</h2>
-  <h3>We Look forward to seeing you at our wedding!</h3>
-  <p>Want a confirmation email? Put your email below and click submit</p>
-  <label for='email'>Email:</label>
+<div class="bg-white opacity-75 p1 text-center text-green">
+  <h3>You're all booked!</h3>
+  <p>We look forward to seeing you at our wedding!</p>
+  <!-- <<p>If you would like a confirmation email and to be kept up to date please put your email below and click submit</p>
+  <label class="mb1" for='email'>Email:</label>
   {{input name='email' type='email'
     value=model.email
     focus-out=(action (mut showEmailError) true)
@@ -12,9 +12,6 @@
     <div class="error">
       {{v-get model 'email' 'message'}}
     </div>
-  {{/if}}
-  <p>For more information for the big day please check below or check the navigation on the top right</p>
-  <a class='btn btn-primary' href='#venue'>Venue</a>
-  <a class='btn btn-primary' href='#hotels'>Hotels</a>
-  <a class='btn btn-primary' href='#travel'>Travel</a>
+  {{/if}} -->
+  <p>For more information for the big day please check below or the navigation on the top right</p>
 </div>

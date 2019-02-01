@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'wedding-site',
     environment,
     rootURL: '/',
-    locationType: 'auto',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -37,12 +37,14 @@ module.exports = function(environment) {
     // keep test console output quieter
     ENV.APP.LOG_ACTIVE_GENERATION = false;
     ENV.APP.LOG_VIEW_LOOKUPS = false;
-
     ENV.APP.rootElement = '#ember-testing';
     ENV.APP.autoboot = false;
   }
 
   if (environment === 'production') {
+    ENV.contentSecurityPolicy = {
+      'connect-src': "'self' https://qoj8j8r0x4.execute-api.eu-west-2.amazonaws.com"
+    }
     // here you can enable a production-specific feature
   }
 

@@ -24,10 +24,10 @@ export default Controller.extend({
         const guestPromises = guests.map((guest) => guest.save());
         const savePromises = RSVP.all(guestPromises).then(() => booking.save()).then(() => {
           this.transitionToRoute('home.booking.confirmation', booking);
+        }).catch(() => {
+          this.set('showModelSaveError', true);
         });
         this.set('savePromises', DS.PromiseObject.create(savePromises));
-      }).catch(() => {
-        this.set('showModelSaveError', true);
       });
     }
   },
