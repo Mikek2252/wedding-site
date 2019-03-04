@@ -1,25 +1,29 @@
-<img src="/img/logo.svg" alt="Logo">
-<p class="text-white-50 text-white mx-auto mt-2 mb-1">
-  For more information and to RSVP please enter your booking reference on your invitation:
-</p>
-<form class="form-horizontal">
-  <div class="form-group">
-    {{input
-      value=model.bookingRef
-      class="form-control"
-      focus-out=(action (mut showBookingRefError) true)}}
-    {{#if showBookingRefError}}
-      <div class="error">
-        {{v-get model 'bookingRef' 'message'}}
-      </div>
+{{#if booking.isPending}}
+  {{svg-loader}}
+{{else}}
+  <img src="/img/logo.svg" alt="Logo">
+  <p class="text-white-50 text-white mx-auto mt-2 mb-1">
+    For more information and to RSVP please enter your booking reference on your invitation:
+  </p>
+  <form class="form-horizontal">
+    <div class="form-group">
+      {{input
+        value=model.bookingRef
+        class="form-control"
+        focus-out=(action (mut showBookingRefError) true)}}
+      {{#if showBookingRefError}}
+        <div class="error">
+          {{v-get model 'bookingRef' 'message'}}
+        </div>
+      {{/if}}
+    </div>
+    {{#if bookingNotFoundError}}
+      <p class="error">
+        Sorry we couldn't find your booking, please check your booking reference.
+      </p>
     {{/if}}
-  </div>
-  {{#if bookingNotFoundError}}
-    <p class="error">
-      Sorry we couldn't find your booking, please check your booking reference.
-    </p>
-  {{/if}}
-  <div class="form-group">
-   <button {{action "findBooking"}} class="btn btn-sm btn-primary">Check-in</button>
- </div>
-</form>
+    <div class="form-group">
+     <button {{action "findBooking"}} class="btn btn-sm btn-primary">Check-in</button>
+   </div>
+  </form>
+{{/if}}

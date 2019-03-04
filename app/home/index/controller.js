@@ -6,9 +6,11 @@ export default Controller.extend({
       const booking = this.get('model');
       return booking.validate().then(({ validations }) => {
         if (validations.get('isValid')) {
-          return this.store.queryRecord('booking', {
+          const bookingSave = this.store.queryRecord('booking', {
             bookingRef: booking.bookingRef
-          }).then((booking) => {
+          })
+          this.set('booking', bookingSave);
+          return bookingSave.then((booking) => {
             this.transitionToRoute('home.booking.guests', booking);
           }).catch(() => {
             this.set('bookingNotFoundError', true)
